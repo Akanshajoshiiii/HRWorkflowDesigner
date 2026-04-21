@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# HR Workflow Designer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript prototype for designing internal HR workflows visually using **React Flow**.  
+This project was built as part of the **Tredence Studio Full Stack Engineering Intern case study**, which requires a workflow canvas, custom nodes, editable node forms, mock API integration, and a simulation sandbox. :contentReference[oaicite:0]{index=0}
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Drag-and-drop workflow builder
+- Custom nodes for:
+  - Start
+  - Task
+  - Approval
+  - Automated Step
+  - End
+- Editable configuration panel for selected nodes
+- Mock API layer for automation actions
+- Workflow simulation sandbox
+- Basic validation for graph structure
+- JSON serialization of the workflow
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- React Flow (`@xyflow/react`)
+- Zustand
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```txt
+src/
+  api/
+    mockApi.ts
+  components/
+    FlowCanvas.tsx
+    KeyValueEditor.tsx
+    NodeFormPanel.tsx
+    Sidebar.tsx
+    SimulationPanel.tsx
+    nodes/
+      CustomNodes.tsx
+      NodeShell.tsx
+  mock/
+    automations.ts
+  store/
+    workflowStore.ts
+  types/
+    workflow.ts
+  utils/
+    defaultNodeData.ts
+    workflow.ts
+  App.tsx
+  main.tsx
+  index.css
