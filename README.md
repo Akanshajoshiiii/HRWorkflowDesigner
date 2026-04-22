@@ -54,3 +54,12 @@ src/
   App.tsx
   main.tsx
   index.css
+
+## How to Run
+
+# install dependencies
+npm install
+
+# start dev server
+npm run dev
+
