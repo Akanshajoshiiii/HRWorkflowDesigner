@@ -28,9 +28,9 @@ This project was built as part of the **Tredence Studio Full Stack Engineering I
 - Tailwind CSS
 
 ## How to run
-# install dependencies
+### install dependencies
 npm install
-# start dev server
+### start dev server
 npm run dev
 
 ## Project Structure
