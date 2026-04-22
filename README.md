@@ -1,7 +1,7 @@
 # HR Workflow Designer
 
 A React + TypeScript prototype for designing internal HR workflows visually using **React Flow**.  
-This project was built as part of the **Tredence Studio Full Stack Engineering Intern case study**, which requires a workflow canvas, custom nodes, editable node forms, mock API integration, and a simulation sandbox. :contentReference[oaicite:0]{index=0}
+This project was built as part of the **Tredence Studio Full Stack Engineering Intern case study**, which requires a workflow canvas, custom nodes, editable node forms, mock API integration, and a simulation sandbox.
 
 ## Features
 
@@ -26,6 +26,12 @@ This project was built as part of the **Tredence Studio Full Stack Engineering I
 - React Flow (`@xyflow/react`)
 - Zustand
 - Tailwind CSS
+
+## How to run
+# install dependencies
+npm install
+# start dev server
+npm run dev
 
 ## Project Structure
 
@@ -54,12 +60,3 @@ src/
   App.tsx
   main.tsx
   index.css
-
-## How to Run
-
-# install dependencies
-npm install
-
-# start dev server
-npm run dev
-
